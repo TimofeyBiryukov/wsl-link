@@ -35,11 +35,11 @@ npm i wsl-link -g
 
 On Windows start server:
 ```
-wsl server
+windows server
 ```
 Use on subsystem linux (npm ls will be run on host Windows):
 ```
-wsl npm ls
+windows npm ls
 ```
 
 # Case
@@ -65,8 +65,8 @@ const Nightmare = require('nightmare');
 Install Windows version of Nightmare.js and run it on Windows.
 
 ```
-wsl npm i nightmare --save
-wsl node app
+windows npm i nightmare --save
+windows node app
 ```
 You should see Phantom browser open on your Windows host.
 
