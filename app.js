@@ -1,4 +1,4 @@
-
+#!/usr/bin/env node
 
 const type = process.argv[2];
 const {Socket, createServer} = require('net');
