@@ -17,7 +17,7 @@ if (type === 'server') {
       cwd = path.normalize(cwd);
       const cmd = spawn(
         process.env.comspec,
-        ['/c', `npm.cmd`, ...data.args],
+        ['/c', data.cmd, ...data.args],
         {cwd}
       );
       cmd.stdout.pipe(socket);
@@ -32,8 +32,14 @@ if (type === 'server') {
 } else {
   const client = new Socket();
   client.connect(PORT, HOST, () => {
+    console.log({
+      cmd: process.argv[2],
+      args: process.argv.slice(3, process.argv.length),
+      path: process.env.PWD
+    });
     client.write(JSON.stringify({
-      args: process.argv.slice(2, process.argv.length),
+      cmd: process.argv[2],
+      args: process.argv.slice(3, process.argv.length),
       path: process.env.PWD
     }));
   });
