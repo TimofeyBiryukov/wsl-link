@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "wnpm": "./npm.js"
+    "wsl": "./app.js"
   },
   "keywords": [],
   "author": "",

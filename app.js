@@ -32,11 +32,6 @@ if (type === 'server') {
 } else {
   const client = new Socket();
   client.connect(PORT, HOST, () => {
-    console.log({
-      cmd: process.argv[2],
-      args: process.argv.slice(3, process.argv.length),
-      path: process.env.PWD
-    });
     client.write(JSON.stringify({
       cmd: process.argv[2],
       args: process.argv.slice(3, process.argv.length),
