@@ -68,6 +68,6 @@ Install Windows version of Nightmare.js and run it on Windows.
 windows npm i nightmare --save
 windows node app
 ```
-You should see Phantom browser open on your Windows host.
+You should see Electron browser open on your Windows host.
 
-TODO: iamge
+![example](./example.png)
