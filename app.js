@@ -4,8 +4,8 @@ const type = process.argv[2];
 const {Socket, createServer} = require('net');
 const {spawn} = require('child_process');
 const path = require('path');
-const PORT = process.env.PORT || 1337;
-const HOST = process.env.HOST || '127.0.0.1';
+const PORT = process.env.WSL_PORT || 12476;
+const HOST = process.env.WSL_HOST || '127.0.0.1';
 
 if (process.platform === 'win32') {
   const server = createServer(socket => {

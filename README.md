@@ -6,8 +6,9 @@ Allows WSL users to run any CMD commands on host Windows system from within linu
 
 [StackOverflow Question](https://stackoverflow.com/questions/62085598/linking-windows-commands-inside-windows-subsystem-for-linux-ubuntu)
 
+When doing web development on Windows using [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) you sometimes have to install and run Windows versions of npm packages. This will require you to switch shells and/or terminal application to use node and npm installed on the Windows host.
 
-TODO
+This package will allow you to link wsl to your host system through `wsl-link` command. You will be able to run you Windows npm applications directly from you WSL shell.
 
 # Requirements
 
@@ -62,8 +63,6 @@ pm2 status
 ```
 ![pm2 status display](./pm2status.png)
 
-
-
 # Usage
 
 On Windows start server (if not using startup setup with pm2):
@@ -104,3 +103,12 @@ wsl-link node app
 You should see Electron browser open on your Windows host.
 
 ![Electron Running](./electronrunning.png)
+
+# Config
+
+Optionally both Windows and WSL commands will use env vars for host/port configuration.
+
+* Set `WSL_PORT` env to change default port.
+* Set `WSL_HOST` env to change default host, ie '127.0.0.1'.
+
+Port and host must be configured to be the same both on WSL and on Windows host.

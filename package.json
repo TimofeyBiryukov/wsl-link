@@ -1,8 +1,8 @@
 {
   "name": "wsl-link",
   "version": "1.0.0",
-  "description": "",
-  "main": "npm.js",
+  "description": "Allows WSL users to run any CMD commands on host Windows system from within linux subsystem.",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,10 +10,24 @@
     "wsl-link": "./app.js",
     "wsl-link-pm2": "./daemon.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "windows",
+    "wsl",
+    "windows subsystem for linux",
+    "wsl link",
+    "electron",
+    "nightmarejs",
+    "pm2"
+  ],
+  "author": "Timofey Biryukov <timofeybiryukov@gmail.com>",
+
   "license": "ISC",
   "dependencies": {
     "pm2": "^4.4.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TimofeyBiryukov/wsl-link.git"
+  },
+  "homepage": "https://github.com/TimofeyBiryukov/wsl-link"
 }
