@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const pm2 = require('pm2');
+const package = require('./package.json');
 
 
 pm2.connect(err => {
@@ -11,6 +12,7 @@ pm2.connect(err => {
 
   console.log('PM2 Connected');
   pm2.start({
+    name: package.name,
     script: 'app.js'
   }, err => {
     console.log('PM2 Script Started');

@@ -8,7 +8,7 @@
   },
   "bin": {
     "wsl-link": "./app.js",
-    "wsl-link-pm2": "./deamon.js"
+    "wsl-link-pm2": "./daemon.js"
   },
   "keywords": [],
   "author": "",
