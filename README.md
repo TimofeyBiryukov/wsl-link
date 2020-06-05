@@ -2,6 +2,8 @@
 
 Allows WSL users to run any CMD commands on host Windows system from within linux subsystem.
 
+![Logo](./logo.jpg)
+
 # WHY
 
 [StackOverflow Question](https://stackoverflow.com/questions/62085598/linking-windows-commands-inside-windows-subsystem-for-linux-ubuntu)
