@@ -10,7 +10,7 @@ Allows WSL users to run any CMD commands on host Windows system from within linu
 
 When doing web development on Windows using [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) you sometimes have to install and run Windows versions of npm packages. This will require you to switch shells and/or terminal application to use node and npm installed on the Windows host.
 
-This package will allow you to link wsl to your host system through `wsl-link` command. You will be able to run you Windows npm applications directly from you WSL shell.
+This package will allow you to link wsl to your host system through `wsl-link` command. You will be able to run your Windows npm applications directly from you WSL shell.
 
 # Requirements
 
@@ -69,9 +69,9 @@ pm2 status
 
 On Windows start server (if not using startup setup with pm2):
 ```
-wsl-link server
+wsl-link
 ```
-Use on subsystem linux (npm ls will be run on host Windows):
+Use on subsystem linux (npm -v will be run on host Windows):
 ```
 wsl-link npm -v
 ```
