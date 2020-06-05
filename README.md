@@ -35,11 +35,11 @@ npm i wsl-link -g
 
 On Windows start server:
 ```
-windows server
+wsl-link server
 ```
 Use on subsystem linux (npm ls will be run on host Windows):
 ```
-windows npm ls
+wsl-link npm ls
 ```
 
 # Case
@@ -65,8 +65,8 @@ const Nightmare = require('nightmare');
 Install Windows version of Nightmare.js and run it on Windows.
 
 ```
-windows npm i nightmare --save
-windows node app
+wsl-link npm i nightmare --save
+wsl-link node app
 ```
 You should see Electron browser open on your Windows host.
 
