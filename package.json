@@ -7,9 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "wsl-link": "./app.js"
+    "wsl-link": "./app.js",
+    "wsl-link-pm2": "./deamon.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "pm2": "^4.4.0"
+  }
 }
