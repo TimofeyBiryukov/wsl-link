@@ -114,3 +114,14 @@ Optionally both Windows and WSL commands will use env vars for host/port configu
 * Set `WSL_HOST` env to change default host, ie '127.0.0.1'.
 
 Port and host must be configured to be the same both on WSL and on Windows host.
+
+### Windows specific config.
+
+For running commands not in `/mnt/*` Windows wsl-link server will need to know your linux root path on Windows. 
+By default it is set to 
+
+`C:\\Users\\%USERNAME%\\AppData\\Local\\Packages\\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\\LocalState\\rootfs`
+
+that is what it is on my machine. If it is different for you, you can set a custom `WIN_BASE_DIR` env var and point it to your linux root.
+
+* Set `WIN_BASE_DIR` evn to change base win dir to operate outside `/mnt/*` folders on linux.

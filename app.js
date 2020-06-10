@@ -9,7 +9,7 @@ const PORT = process.env.WSL_PORT || 12476;
 const HOST = process.env.WSL_HOST || '127.0.0.1';
 
 if (process.platform === 'win32') {
-  const WIN_BASE_DIR = `C:\\Users\\${process.env.USERNAME}\\AppData\\Local\\Packages\\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\\LocalState\\rootfs`;
+  const WIN_BASE_DIR = process.env.WIN_BASE_DIR || `C:\\Users\\%USERNAME%\\AppData\\Local\\Packages\\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\\LocalState\\rootfs`;
 
   const server = createServer(socket => {
     socket.on('data', data => {
@@ -39,7 +39,9 @@ if (process.platform === 'win32') {
       winpath = winpath.replace(winpath[0],
         winpath[0].toUpperCase() + ':/');
     } else {
-      winpath = WIN_BASE_DIR + winpath;
+      let winBase = WIN_BASE_DIR
+        .replace('%USERNAME%', process.env.USERNAME);
+      winpath =  winBase + winpath;
     }
     
     winpath = path.normalize(winpath);
