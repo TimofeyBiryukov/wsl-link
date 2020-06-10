@@ -33,15 +33,15 @@ if (process.platform === 'win32') {
   function translatePath(upath) {
     let winpath = '';
     winpath += upath;
+
     if (winpath.includes('/mnt/')) {
-      winpath = data.path.replace('/mnt/', '');  
-      winpath = winpath.replace(cwd[0],
+      winpath = upath.replace('/mnt/', '');  
+      winpath = winpath.replace(winpath[0],
         winpath[0].toUpperCase() + ':/');
     } else {
       winpath = WIN_BASE_DIR + winpath;
     }
-    // if (cwd.includes('~')) cwd = cwd
-    //   .replace('~', WIN_HOME_DIR + '\\home\\' + data.username);
+    
     winpath = path.normalize(winpath);
     console.log(winpath);
     return winpath;
