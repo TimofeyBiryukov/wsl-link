@@ -20,7 +20,6 @@
     "pm2"
   ],
   "author": "Timofey Biryukov <timofeybiryukov@gmail.com>",
-
   "license": "ISC",
   "dependencies": {
     "pm2": "^4.4.0"
