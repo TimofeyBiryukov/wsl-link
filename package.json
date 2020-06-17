@@ -1,6 +1,6 @@
 {
   "name": "wsl-link",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Allows WSL users to run any CMD commands on host Windows system from within linux subsystem.",
   "main": "app.js",
   "scripts": {

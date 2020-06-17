@@ -14,7 +14,7 @@ This package will allow you to link wsl to your host system through `wsl-link` c
 
 # WSL 2
 
-This package will not work for WSL2 but it is fortunately not needed. In WSL 2 you can just use .exe commands in lunux to achive the same result:
+This package will not work for WSL2 but it is fortunately not needed. In WSL 2 you can just use .exe commands in linux to achive the same result:
 
 ```
 powershell.exe node -v
